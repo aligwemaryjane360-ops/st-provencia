@@ -59,7 +59,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
                 <div className="p-6 md:p-8 flex justify-between items-start border-b border-white/10 relative z-10">
                   <div>
                     <span
-                      className={`inline-block px-3 py-1 text-[10px] font-inter font-semibold tracking-[0.2em] uppercase rounded-full mb-3 ${
+                      className={`inline-block px-3 py-1 text-[10px] font-inter font-bold tracking-[0.2em] uppercase rounded-full mb-3 ${
                         isSparkling
                           ? 'bg-[#214E9F]/30 text-[#60A5FA] border border-[#214E9F]/50'
                           : 'bg-[#6B2338]/30 text-[#F472B6] border border-[#6B2338]/50'
@@ -67,10 +67,10 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
                     >
                       {product.badge}
                     </span>
-                    <h3 className="font-cormorant text-3xl sm:text-4xl font-normal text-white">
+                    <h3 className="font-cormorant text-3xl sm:text-4xl font-bold text-white tracking-wide">
                       {product.name}
                     </h3>
-                    <p className="text-xs font-inter text-[#C8A96A] font-light tracking-wider mt-1">
+                    <p className="text-xs font-inter text-[#C8A96A] font-semibold tracking-wider mt-1">
                       {product.subtitle}
                     </p>
                   </div>
@@ -86,11 +86,11 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
                 </div>
 
                 {/* Bottle Image Container with Hover Effects */}
-                <div className="relative py-12 px-6 flex items-center justify-center min-h-[380px] group-hover:bg-gradient-to-b group-hover:from-transparent group-hover:to-black/30 transition-colors">
+                <div className="relative py-10 px-6 flex items-center justify-center min-h-[440px] group-hover:bg-gradient-to-b group-hover:from-transparent group-hover:to-black/30 transition-colors">
                   
                   {/* Glowing Backlight Circle */}
                   <div
-                    className={`absolute w-64 h-64 rounded-full blur-3xl transition-opacity duration-700 ${
+                    className={`absolute w-72 h-72 rounded-full blur-3xl transition-opacity duration-700 ${
                       isHovered ? 'opacity-70 scale-110' : 'opacity-20'
                     } ${isSparkling ? 'bg-[#214E9F]' : 'bg-[#6B2338]'}`}
                   />
@@ -100,7 +100,7 @@ export const ProductShowcase: React.FC<ProductShowcaseProps> = ({
                     src={product.image}
                     alt={product.name}
                     referrerPolicy="no-referrer"
-                    className="relative z-10 h-[360px] w-auto object-contain transition-transform duration-700 group-hover:scale-105 drop-shadow-[0_20px_30px_rgba(0,0,0,0.7)]"
+                    className="relative z-10 h-[420px] sm:h-[480px] w-auto object-contain transition-transform duration-700 group-hover:scale-105 drop-shadow-[0_20px_30px_rgba(0,0,0,0.7)]"
                   />
                 </div>
 

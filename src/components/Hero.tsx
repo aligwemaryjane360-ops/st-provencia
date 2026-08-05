@@ -56,9 +56,9 @@ export const Hero: React.FC<HeroProps> = ({ onOpenProductDetail, onOpenInquiry }
           </div>
 
           {/* Main Headline */}
-          <h1 className="font-cormorant text-4xl sm:text-6xl xl:text-7xl font-light leading-[1.08] tracking-tight text-white">
+          <h1 className="font-cormorant text-4xl sm:text-6xl xl:text-7xl font-bold leading-[1.08] tracking-tight text-white">
             Pure Australian Mineral Water.{' '}
-            <span className="block font-normal italic text-[#C8A96A] gold-shimmer mt-1">
+            <span className="block font-semibold italic text-[#C8A96A] gold-shimmer mt-1">
               Elevated for Extraordinary Moments.
             </span>
           </h1>
@@ -110,20 +110,20 @@ export const Hero: React.FC<HeroProps> = ({ onOpenProductDetail, onOpenInquiry }
           <div className="mb-6 p-1.5 bg-[#161C28]/80 backdrop-blur-md rounded-full border border-white/15 flex items-center space-x-2 z-20 shadow-2xl">
             <button
               onClick={() => setActiveTab('sparkling')}
-              className={`px-6 py-2 rounded-full text-xs font-medium tracking-widest uppercase transition-all duration-300 ${
+              className={`px-6 py-2 rounded-full text-xs font-bold tracking-widest uppercase transition-all duration-300 ${
                 activeTab === 'sparkling'
                   ? 'bg-[#214E9F] text-white shadow-lg shadow-[#214E9F]/50 scale-105'
-                  : 'text-gray-400 hover:text-white'
+                  : 'text-gray-300 hover:text-white font-semibold'
               }`}
             >
               Sparkling Sapphire
             </button>
             <button
               onClick={() => setActiveTab('still')}
-              className={`px-6 py-2 rounded-full text-xs font-medium tracking-widest uppercase transition-all duration-300 ${
+              className={`px-6 py-2 rounded-full text-xs font-bold tracking-widest uppercase transition-all duration-300 ${
                 activeTab === 'still'
                   ? 'bg-[#6B2338] text-white shadow-lg shadow-[#6B2338]/50 scale-105'
-                  : 'text-gray-400 hover:text-white'
+                  : 'text-gray-300 hover:text-white font-semibold'
               }`}
             >
               Still Burgundy
@@ -131,7 +131,7 @@ export const Hero: React.FC<HeroProps> = ({ onOpenProductDetail, onOpenInquiry }
           </div>
 
           {/* Bottle Image Frame */}
-          <div className="relative group w-full max-w-sm sm:max-w-md aspect-[3/4] flex items-center justify-center">
+          <div className="relative group w-full max-w-md sm:max-w-lg lg:max-w-xl h-[460px] sm:h-[540px] lg:h-[600px] flex items-center justify-center">
             
             {/* Soft Backlight Aura */}
             <div
@@ -141,12 +141,12 @@ export const Hero: React.FC<HeroProps> = ({ onOpenProductDetail, onOpenInquiry }
             />
 
             {/* Main Animated Bottle */}
-            <div className="relative z-10 w-full h-full p-4 flex items-center justify-center">
+            <div className="relative z-10 w-full h-full p-2 flex items-center justify-center">
               <img
                 src={currentProduct.image}
                 alt={currentProduct.name}
                 referrerPolicy="no-referrer"
-                className="max-h-[82vh] w-auto object-contain animate-float drop-shadow-[0_25px_35px_rgba(0,0,0,0.8)] transition-all duration-700 group-hover:scale-105 cursor-pointer"
+                className="max-h-full h-full w-auto object-contain animate-float drop-shadow-[0_25px_35px_rgba(0,0,0,0.85)] transition-all duration-700 group-hover:scale-105 cursor-pointer"
                 onClick={() => onOpenProductDetail(currentProduct)}
               />
             </div>
@@ -163,10 +163,10 @@ export const Hero: React.FC<HeroProps> = ({ onOpenProductDetail, onOpenInquiry }
 
           {/* Product Micro Description underneath */}
           <div className="mt-4 text-center space-y-1">
-            <h3 className="font-cormorant text-2xl font-semibold text-white">
+            <h3 className="font-cormorant text-2xl sm:text-3xl font-bold text-white tracking-wide">
               {currentProduct.name}
             </h3>
-            <p className="text-xs text-[#C8A96A] font-light tracking-wider">
+            <p className="text-xs text-[#C8A96A] font-semibold tracking-wider">
               {currentProduct.subtitle}
             </p>
           </div>
