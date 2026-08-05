@@ -1,0 +1,6 @@
+{
+  "name": "St. Provencia Australian Mineral Water",
+  "description": "A luxury Australian natural mineral water brand website featuring Sparkling (Deep Sapphire Blue) and Still (Deep Burgundy) bottles, editorial storytelling, and fine dining hospitality experience.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
